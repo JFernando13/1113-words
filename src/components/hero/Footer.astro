@@ -1,0 +1,41 @@
+---
+import GithubIcon from "~/icons/redes/GithubIcon.astro";
+import InstagramIcon from "~/icons/redes/InstagramIcon.astro";
+import LinkedlnIcon from "~/icons/redes/LinkedlnIcon.astro";
+---
+
+<footer class="flex justify-between items-center w-full">
+  <!-- Interesting Links -->
+  <article class="text-tertiary-500 flex gap-4 items-center">
+    <a href="/why" class="interested-link transition-duration-300"
+      >Why this project?</a
+    >
+    <span>•</span>
+    <a href="/who" class="interested-link transition-duration-300">Who I am?</a>
+  </article>
+
+  <!-- Redes -->
+  <article class="text-tertiary-500 flex gap-8">
+    <GithubIcon class="redes transition-duration-300" />
+    <LinkedlnIcon class="redes transition-duration-300" />
+    <InstagramIcon class="redes transition-duration-300" />
+  </article>
+</footer>
+
+<style>
+  .interested-link {
+    @apply text-sm;
+
+    &:hover {
+      @apply text-tertiary-100;
+    }
+  }
+
+  .redes:hover {
+    @apply text-tertiary-100;
+  }
+
+  span {
+    user-select: none;
+  }
+</style>
