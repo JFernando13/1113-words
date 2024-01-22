@@ -1,0 +1,26 @@
+---
+import Lighticon from "../icons/theme/Lighticon.astro";
+---
+
+<nav class="flex justify-between w-full">
+  <a>III3 words</a>
+
+  <article class="flex gap-4">
+    <button class="btn rounded-full">en</button>
+    <button class="btn flex justify-center items-center rounded-full">
+      <Lighticon />
+    </button>
+  </article>
+</nav>
+
+<style>
+  button {
+    @apply h-11 w-11 bg-primary-600;
+
+    &:hover {
+      box-shadow: 0px 0px 8px 4px #1d222f inset;
+      transform: scale(0.95);
+      @apply bg-primary-500;
+    }
+  }
+</style>
