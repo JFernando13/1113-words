@@ -1,0 +1,28 @@
+---
+import FavoritesIcon from "../icons/FavoriteIcon.astro";
+import SpeedDial from "./SpeedDial.astro";
+---
+
+<nav class="flex justify-between items-start h-11 w-full">
+  <button
+    class="btn px-10 h-full bg-primary-600 shadow-btn-secondary rounded-lg hover:bg-primary-500/80"
+    >Filters</button
+  >
+
+  <article class="flex gap-4">
+    <SpeedDial />
+    <button class="btn flex justify-center items-center rounded-full h-11 w-11">
+      <FavoritesIcon />
+    </button>
+  </article>
+</nav>
+
+<style>
+  article button {
+    @apply bg-primary-700/90 font-medium shadow-btn-primary;
+
+    &:hover {
+      @apply bg-primary-600;
+    }
+  }
+</style>
