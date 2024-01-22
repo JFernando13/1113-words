@@ -1,0 +1,50 @@
+---
+import { daysCard } from "./ListOfDays.astro";
+---
+
+<div class="group" id="day-selector">
+  <button
+    class="rounded-lg bg-primary-700 transition-colors group-hover:bg-primary-600 font-medium text-sm capitalize h-11 px-5"
+  >
+    select day
+  </button>
+  <ul class="">
+    {
+      daysCard.map((day) => (
+        <li>
+          <a
+            href={`/day/${day.id}`}
+            aria-label={`Go to day ${day.id}`}
+            class="bg-primary-700 h-11 flex items-center justify-center hover:bg-primary-600 transition-colors w-full"
+          >
+            Day {day.day}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  a + a {
+    @apply border-t-2 border-tertiary-500;
+  }
+
+  div {
+    @apply z-10 flex flex-col gap-2;
+  }
+
+  ul {
+    @apply flex rounded-lg overflow-scroll transition-all flex-col h-[0px];
+  }
+</style>
+
+<script>
+  const button = document.getElementById("day-selector")!;
+
+  button.addEventListener("click", () => {
+    const ul = button.querySelector("ul")!;
+
+    ul.classList.toggle("h-[150px]");
+  });
+</script>

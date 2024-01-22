@@ -1,0 +1,97 @@
+---
+import SmileIcon from "../icons/emojis/SmileIcon.astro";
+
+export const daysCard = [
+  {
+    id: crypto.randomUUID(),
+    day: 1,
+    tags: ["thriller"],
+    mood: "happy",
+  },
+  {
+    id: crypto.randomUUID(),
+    day: 2,
+    tags: ["love", "inspiration"],
+    mood: "happy",
+  },
+  {
+    id: crypto.randomUUID(),
+    day: 3,
+    tags: ["romance", "comedy", "suspense", "aventure"],
+    mood: "happy",
+  },
+  {
+    id: crypto.randomUUID(),
+    day: 4,
+    tags: ["aventure", "tragedy", "passion"],
+    mood: "happy",
+  },
+  {
+    id: crypto.randomUUID(),
+    day: 6,
+    tags: ["aventure", "tragedy", "passion"],
+    mood: "happy",
+  },
+  {
+    id: crypto.randomUUID(),
+    day: 7,
+    tags: ["aventure", "tragedy", "passion"],
+    mood: "happy",
+  },
+];
+---
+
+<section class="day-container">
+  {
+    daysCard.map((day) => (
+      <a
+        href={`/day/${day.id}`}
+        class="day-card group"
+        aria-label={`Go to day ${day.id}`}
+        role="article"
+      >
+        <header class="day-card-header">
+          <h2 class="text-3xl font-bold group-hover:scale-[1.5] group-hover:-translate-y-12 group-hover:translate-x-4  transition-all duration-500">
+            Day {day.day}
+          </h2>
+
+          <SmileIcon class="stroke-secondary-200 transition-colors group-hover:stroke-primary-100" />
+        </header>
+
+        <section class="overflow-scroll flex tag-container gap-2">
+          {day.tags.map((tag) => (
+            <h3 class="tag ">{tag}</h3>
+          ))}
+        </section>
+      </a>
+    ))
+  }
+</section>
+
+<style>
+  .day-container {
+    grid-template-columns: repeat(auto-fill, minmax(min(45vw, 300px), 1fr));
+    @apply grid gap-4 gap-y-12 my-14 relative cursor-pointer;
+  }
+
+  .day-card {
+    @apply p-6 rounded-lg bg-secondary-base flex flex-col gap-4 shadow-card-primary;
+  }
+
+  .day-card-header {
+    @apply flex justify-between;
+  }
+
+  .tag-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tag {
+    box-shadow: 0px 0px 6px 0px rgba(15, 18, 27, 0.5) inset;
+    @apply px-4 rounded-full py-1 bg-tertiary-600 text-tertiary-300 text-xs w-max capitalize transition-colors;
+
+    &:hover {
+      @apply bg-tertiary-500;
+    }
+  }
+</style>
