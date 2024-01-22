@@ -8,7 +8,7 @@ import { daysCard } from "./ListOfDays.astro";
   >
     select day
   </button>
-  <ul class="">
+  <ul class="group-hover:h-[150px]">
     {
       daysCard.map((day) => (
         <li>
@@ -37,6 +37,10 @@ import { daysCard } from "./ListOfDays.astro";
   ul {
     @apply flex rounded-lg overflow-scroll transition-all flex-col h-[0px];
   }
+
+  .open {
+    @apply h-[150px];
+  }
 </style>
 
 <script>
@@ -45,6 +49,6 @@ import { daysCard } from "./ListOfDays.astro";
   button.addEventListener("click", () => {
     const ul = button.querySelector("ul")!;
 
-    ul.classList.toggle("h-[150px]");
+    ul.classList.toggle("open");
   });
 </script>
