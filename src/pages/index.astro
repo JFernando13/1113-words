@@ -1,16 +1,62 @@
 ---
+import NavBar from "~/components/hero/NavBar.astro";
+import Main from "~/components/hero/Main.astro";
+import Footer from "~/components/hero/Footer.astro";
 
+import NavBarBlog from "~/components/blog-days/NavBar.astro";
+import ListOfDays from "~/components/blog-days/ListOfDays.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>My day in 1113 words</title>
+  </head>
+  <body>
+    <header class="section flex flex-col justify-between items-center">
+      <NavBar />
+      <Main />
+      <Footer />
+    </header>
+
+    <section id="days" class="section">
+      <NavBarBlog />
+      <ListOfDays />
+    </section>
+    <div class="bg-page"></div>
+  </body>
 </html>
+
+<style>
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  .bg-page {
+    background-image: radial-gradient(
+      at center top,
+      rgb(55, 65, 81),
+      rgb(17, 24, 39),
+      rgb(0, 0, 0)
+    );
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+  }
+</style>
+
+<style is:global>
+  .section {
+    @apply min-h-screen max-w-screen-lg mx-auto py-16 px-6 xl:px-0;
+  }
+
+  .btn {
+    @apply transition-all duration-300 ease-out shadow-btn-primary;
+  }
+</style>
