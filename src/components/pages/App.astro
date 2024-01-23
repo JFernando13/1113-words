@@ -1,0 +1,85 @@
+---
+import NavBar from "~/components/hero/NavBar.astro";
+import Main from "~/components/hero/Main.astro";
+import Footer from "~/components/hero/Footer.astro";
+
+import NavBarBlog from "~/components/blog-days/NavBar.astro";
+import ListOfDays from "~/components/blog-days/ListOfDays.astro";
+import { ViewTransitions } from "astro:transitions";
+
+import { defaultLanguage } from "~/i18n/ui";
+import { getTranslation } from "~/i18n/utils";
+
+const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
+---
+
+<html lang={Astro.currentLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{t.SEO.title}</title>
+  </head>
+  <body class="animate-fade animate-duration-1000 bg-primary-700">
+    <header class="section flex flex-col justify-between items-center">
+      <NavBar />
+      <Main />
+      <Footer />
+    </header>
+
+    <section id="days" class="section">
+      <NavBarBlog />
+      <ListOfDays />
+    </section>
+    <div class="bg-page"></div>
+    <style></style>
+
+    <style is:global>
+      html {
+        color-scheme: dark light;
+        scroll-behavior: smooth;
+      }
+
+      :root.dark {
+        --first-color: rgb(55, 65, 81);
+        --second-color: rgb(17, 24, 39);
+        --third-color: rgb(0, 0, 0);
+
+        --primary-color-200: #b8bed3;
+      }
+
+      :root {
+        --first-color: rgb(255, 255, 255);
+        --second-color: rgb(55, 65, 81);
+        --third-color: rgb(0, 0, 0);
+
+        --primary-color-200: #2a3041;
+      }
+
+      .bg-page {
+        background-image: radial-gradient(
+          at center top,
+          var(--first-color),
+          var(--second-color),
+          var(--third-color)
+        );
+
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: -10;
+        width: 100%;
+      }
+
+      .section {
+        @apply min-h-screen max-w-screen-lg mx-auto py-16 px-6 xl:px-0;
+      }
+
+      .btn {
+        @apply transition-all duration-300 ease-out shadow-btn-primary;
+      }
+    </style>
+  </body>
+</html>

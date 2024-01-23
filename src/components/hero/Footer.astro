@@ -1,17 +1,23 @@
 ---
+import { defaultLanguage } from "~/i18n/ui";
+import { getTranslation } from "~/i18n/utils";
 import GithubIcon from "~/icons/redes/GithubIcon.astro";
 import InstagramIcon from "~/icons/redes/InstagramIcon.astro";
 import LinkedlnIcon from "~/icons/redes/LinkedlnIcon.astro";
+
+const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
 ---
 
 <footer class="flex justify-between items-center w-full">
   <!-- Interesting Links -->
-  <article class="text-tertiary-500 flex gap-4 items-center">
+  <article class="text-tertiary-500 flex gap-4 items-center capitalize">
     <a href="/why" class="interested-link transition-duration-300"
-      >Why this project?</a
+      >{t.FOOTER.links.why}</a
     >
     <span>•</span>
-    <a href="/who" class="interested-link transition-duration-300">Who I am?</a>
+    <a href="/who" class="interested-link transition-duration-300"
+      >{t.FOOTER.links.who}</a
+    >
   </article>
 
   <!-- Redes -->

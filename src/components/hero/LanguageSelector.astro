@@ -1,0 +1,61 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import SpeedDial from "../common/SpeedDial.astro";
+import { defaultLanguage } from "~/i18n/ui";
+const { currentLocale } = Astro;
+
+const getRestUrl = (url: string) => {
+  const [, , ...rest] = url.split("/");
+  return rest.join("/") || "/";
+};
+
+const languages = [
+  {
+    name: "English",
+    code: "en",
+    href: getRelativeLocaleUrl("en", getRestUrl(Astro.url.pathname)),
+    flag: "🇬🇧",
+  },
+  {
+    name: "Español",
+    code: "es",
+    href: getRelativeLocaleUrl("es", getRestUrl(Astro.url.pathname)),
+    flag: "🇪🇸",
+  },
+];
+
+const currentLanguage = languages.find((lang) => lang.code === currentLocale);
+const otherLanguages = languages.filter((lang) => lang.code !== currentLocale);
+---
+
+<SpeedDial class="gap-4">
+  <div class="flex gap-2" slot="btn">
+    <span>{currentLanguage?.flag}</span>
+    <span>{currentLanguage?.name}</span>
+  </div>
+  {
+    otherLanguages.map((lang) => (
+      <li>
+        <a
+          href={lang.href}
+          class="bg-primary-700/30 hover:bg-primary-700/70 whitespace-no-wrap flex items-center justify-center w-full gap-x-2 h-11 hover:font-semibold transition-all"
+        >
+          <span>{lang?.flag}</span>
+          <span>{lang?.name}</span>
+        </a>
+      </li>
+    ))
+  }
+</SpeedDial>
+
+<style>
+  button {
+    @apply h-11 bg-primary-600;
+
+    &:hover {
+      box-shadow: 0px 0px 8px 4px #1d222f inset;
+      transform: scale(0.95);
+      @apply bg-primary-500;
+    }
+  }
+</style>
