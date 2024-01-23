@@ -3,38 +3,32 @@ import SmileIcon from "../icons/emojis/SmileIcon.astro";
 
 export const daysCard = [
   {
-    id: crypto.randomUUID(),
-    day: 1,
+    id: 1,
     tags: ["thriller"],
     mood: "happy",
   },
   {
-    id: crypto.randomUUID(),
-    day: 2,
+    id: 2,
     tags: ["love", "inspiration"],
     mood: "happy",
   },
   {
-    id: crypto.randomUUID(),
-    day: 3,
+    id: 3,
     tags: ["romance", "comedy", "suspense", "aventure"],
     mood: "happy",
   },
   {
-    id: crypto.randomUUID(),
-    day: 4,
+    id: 4,
     tags: ["aventure", "tragedy", "passion"],
     mood: "happy",
   },
   {
-    id: crypto.randomUUID(),
-    day: 6,
+    id: 6,
     tags: ["aventure", "tragedy", "passion"],
     mood: "happy",
   },
   {
-    id: crypto.randomUUID(),
-    day: 7,
+    id: 7,
     tags: ["aventure", "tragedy", "passion"],
     mood: "happy",
   },
@@ -45,14 +39,14 @@ export const daysCard = [
   {
     daysCard.map((day) => (
       <a
-        href={`/day/${day.id}`}
+        href={`/days/day-${day.id}`}
         class="day-card group"
         aria-label={`Go to day ${day.id}`}
         role="article"
       >
         <header class="day-card-header">
           <h2 class="text-3xl font-bold group-hover:scale-[1.5] group-hover:-translate-y-12 group-hover:translate-x-4  transition-all duration-500">
-            Day {day.day}
+            Day {day.id}
           </h2>
 
           <SmileIcon class="stroke-secondary-200 transition-colors group-hover:stroke-primary-100" />
