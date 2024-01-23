@@ -8,10 +8,10 @@ interface Props {
 
 <div
   class="font-medium text-sm transition-all group z-10 flex flex-col gap-1 day-selector"
-  >
+>
   <button
-  type="button"
-    class=` w-full gap-x-2 h-11 px-5 bg-primary-700/50 group-hover:bg-primary-700 rounded-lg capitalize flex justify-center items-center ${Astro.props.class}`
+    type="button"
+    class=` w-full gap-x-2 h-11 px-5 bg-primary-700/50 group-hover:bg-primary-700 rounded-lg capitalize flex justify-center items-center ${Astro.props.class ?? ""}`
     aria-expanded="true"
     aria-haspopup="true"
   >
@@ -35,13 +35,39 @@ interface Props {
 </style>
 
 <script>
-  const button = document.querySelectorAll(".day-selector")!;
+  const buttons = document.querySelectorAll(".day-selector")!;
 
-  button.forEach((button) => {
-    addEventListener("click", () => {
-    const ul = button.querySelector("ul")!;
+  function updateScreenMedia() {
+    const screenMedia = window.matchMedia("(min-width: 1200px)").matches;
 
-    ul.classList.toggle("open");
-  })
-  })
+    if (screenMedia) {
+      buttons.forEach((btn) => {
+        btn.classList.add("group");
+      });
+
+      // Código adicional que desees ejecutar cuando la pantalla sea lo suficientemente grande
+    } else {
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const ul = btn.querySelector("ul")!;
+
+          if (ul.classList.contains("open")) {
+            ul.classList.remove("open");
+          } else {
+            ul.classList.add("open");
+          }
+        });
+      });
+
+      buttons.forEach((btn) => {
+        btn.classList.remove("group");
+      });
+    }
+  }
+
+  // Llamada inicial para configurar el estado inicial basado en el tamaño de la pantalla
+  updateScreenMedia();
+
+  // Agregar un event listener para el evento de cambio de tamaño de la ventana
+  window.addEventListener("resize", updateScreenMedia);
 </script>
