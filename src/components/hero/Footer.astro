@@ -8,7 +8,9 @@ import LinkedlnIcon from "~/icons/redes/LinkedlnIcon.astro";
 const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
 ---
 
-<footer class="flex justify-between items-center w-full">
+<footer
+  class="flex items-center w-full flex-wrap-reverse md:justify-between justify-center gap-6"
+>
   <!-- Interesting Links -->
   <article class="text-tertiary-500 flex gap-4 items-center capitalize">
     <a href="/why" class="interested-link transition-duration-300"

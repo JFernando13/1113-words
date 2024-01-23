@@ -10,16 +10,18 @@ const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
 <main class="flex flex-col items-center gap-16 text-center">
   <hgroup class="flex flex-col gap-2">
     <h1
-      class="text-[99px] font-black bg-clip-text bg-gradient-to-tl from-[#0F121B99] via-[#EBEEF8] to-[#0F121B] text-transparent flex flex-wrap items-center justify-center xl:gap-6"
+      class="text-[54px] font-black bg-clip-text bg-gradient-to-tl from-[#0F121B99] via-[#EBEEF8] to-[#0F121B] text-transparent flex flex-wrap items-center justify-center lg:gap-6 leading-tight md:text-[99px]"
     >
       <span>{t.HERO.title[1]}</span>
-      <span class="text-[33px] w-full xl:w-max">{t.HERO.title[2]}</span>
+      <span class="text-[33px] w-full lg:w-max">{t.HERO.title[2]}</span>
       <span>
         <span>1113</span>
         <span class="text-[54px]">{t.HERO.title[1]}</span>
       </span>
     </h1>
-    <p class="text-primary-200 text-[24px] self-center first-letter:capitalize">
+    <p
+      class="text-primary-200 lg:text-2xl text-lg self-center first-letter:capitalize"
+    >
       {t.HERO.subtitle}
     </p>
   </hgroup>
