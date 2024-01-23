@@ -1,12 +1,14 @@
+import animated from "tailwindcss-animated"
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: "class",
 	theme: {
 		extend: {
 			colors: {
 				"primary": {
 					"100": "#e4e6ee",
-					"200": "#b8bed3",
+					"200": "var(--primary-color-200)",
 					500: "#47506a",
 					600: "#2a3041",
 					700: "#0F121B"
@@ -47,5 +49,5 @@ export default {
 			}
 		}
 	},
-	plugins: [],
+	plugins: [animated],
 }

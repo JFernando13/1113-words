@@ -1,8 +1,11 @@
 ---
 import FavoritesIcon from "../icons/FavoriteIcon.astro";
 import SpeedDial from "../common/SpeedDial.astro";
+import { getCollection } from "astro:content";
 
-import { daysCard } from "./ListOfDays.astro";
+const allDays = await getCollection("days");
+
+console.log(allDays);
 ---
 
 <nav class="flex justify-between items-start h-11 w-full">
@@ -15,14 +18,14 @@ import { daysCard } from "./ListOfDays.astro";
     <SpeedDial>
       <span class="capitalize" slot="btn">show days</span>
       {
-        daysCard.map((day) => (
+        allDays.map(({ data, slug }) => (
           <li>
             <a
-              href={`/day/${day.id}`}
-              aria-label={`Go to day ${day.id}`}
+              href={`/days/${slug}`}
+              aria-label={`Go to day ${data.day}`}
               class="bg-primary-700 hover:bg-primary-600 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 h-11"
             >
-              Day {day.id}
+              Day {data.day}
             </a>
           </li>
         ))

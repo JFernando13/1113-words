@@ -1,60 +1,30 @@
 ---
+import { getCollection } from "astro:content";
 import SmileIcon from "../icons/emojis/SmileIcon.astro";
 
-export const daysCard = [
-  {
-    id: 1,
-    tags: ["thriller"],
-    mood: "happy",
-  },
-  {
-    id: 2,
-    tags: ["love", "inspiration"],
-    mood: "happy",
-  },
-  {
-    id: 3,
-    tags: ["romance", "comedy", "suspense", "aventure"],
-    mood: "happy",
-  },
-  {
-    id: 4,
-    tags: ["aventure", "tragedy", "passion"],
-    mood: "happy",
-  },
-  {
-    id: 6,
-    tags: ["aventure", "tragedy", "passion"],
-    mood: "happy",
-  },
-  {
-    id: 7,
-    tags: ["aventure", "tragedy", "passion"],
-    mood: "happy",
-  },
-];
+const allDays = await getCollection("days");
 ---
 
 <section class="day-container">
   {
-    daysCard.map((day) => (
+    allDays.map(({ data, slug }) => (
       <a
-        href={`/days/day-${day.id}`}
+        href={`/days/${slug}`}
         class="day-card group"
-        aria-label={`Go to day ${day.id}`}
+        aria-label={`Go to day ${data.day}`}
         role="article"
       >
         <header class="day-card-header">
           <h2 class="text-3xl font-bold group-hover:scale-[1.5] group-hover:-translate-y-12 group-hover:translate-x-4  transition-all duration-500">
-            Day {day.id}
+            Day {data.day}
           </h2>
 
           <SmileIcon class="stroke-secondary-200 transition-colors group-hover:stroke-primary-100" />
         </header>
 
         <section class="overflow-scroll flex tag-container gap-2">
-          {day.tags.map((tag) => (
-            <h3 class="tag ">{tag}</h3>
+          {data.tags.map((tag) => (
+            <h3 class="tag">{tag}</h3>
           ))}
         </section>
       </a>
