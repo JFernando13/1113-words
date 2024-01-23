@@ -1,6 +1,8 @@
 ---
 import FavoritesIcon from "../icons/FavoriteIcon.astro";
-import SpeedDial from "./SpeedDial.astro";
+import SpeedDial from "../common/SpeedDial.astro";
+
+import { daysCard } from "./ListOfDays.astro";
 ---
 
 <nav class="flex justify-between items-start h-11 w-full">
@@ -10,7 +12,22 @@ import SpeedDial from "./SpeedDial.astro";
   >
 
   <article class="flex gap-4">
-    <SpeedDial />
+    <SpeedDial>
+      <span class="capitalize" slot="btn">show days</span>
+      {
+        daysCard.map((day) => (
+          <li>
+            <a
+              href={`/day/${day.id}`}
+              aria-label={`Go to day ${day.id}`}
+              class="bg-primary-700 hover:bg-primary-600 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 h-11"
+            >
+              Day {day.day}
+            </a>
+          </li>
+        ))
+      }
+    </SpeedDial>
     <button class="btn flex justify-center items-center rounded-full h-11 w-11">
       <FavoritesIcon />
     </button>
