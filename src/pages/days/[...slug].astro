@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import BlogLayout from "~/layouts/BlogLayout.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("days");
@@ -14,4 +15,6 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Content />
+<BlogLayout titlePage={`${entry.data.title} - Day ${entry.data.day}`}>
+  <Content />
+</BlogLayout>
