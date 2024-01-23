@@ -1,32 +1,50 @@
 ---
 import FavoritesIcon from "../icons/FavoriteIcon.astro";
 import SpeedDial from "../common/SpeedDial.astro";
+
+import { defaultLanguage } from "~/i18n/ui";
+import { getTranslation } from "~/i18n/utils";
 import { getCollection } from "astro:content";
 
-const allDays = await getCollection("days");
+const { currentLocale = defaultLanguage } = Astro;
+
+const t = getTranslation(currentLocale ?? "es");
+
+const allDays = await getCollection("days").then((days) => {
+  return days.filter((day) => {
+    const lang = day.slug.split("/")[0];
+    return lang === currentLocale;
+  });
+});
 ---
 
 <nav class="flex justify-between items-start h-11 w-full">
   <button
-    class="btn px-10 h-full bg-primary-600 shadow-btn-secondary rounded-lg hover:bg-primary-500/80"
-    >Filters</button
+    class="btn px-10 h-full bg-primary-600 shadow-btn-secondary rounded-lg hover:bg-primary-500/80 capitalize"
+    >{t.BLOG.btnFilter}</button
   >
 
-  <article class="flex gap-4">
+  <article class="flex gap-4 items-baseline">
     <SpeedDial>
-      <span class="capitalize" slot="btn">show days</span>
+      <span class="capitalize" slot="btn">{t.BLOG.btn}</span>
       {
-        allDays.map(({ data, slug }) => (
-          <li>
-            <a
-              href={`/days/${slug}`}
-              aria-label={`Go to day ${data.day}`}
-              class="bg-primary-700 hover:bg-primary-600 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 h-11"
-            >
-              Day {data.day}
-            </a>
-          </li>
-        ))
+        allDays.map(({ data, slug }) => {
+          const [, ...id] = slug.split("/");
+
+          return (
+            <li>
+              <a
+                href={`/${currentLocale === "es" ? "" : "en/"}days/${id.join(
+                  "/",
+                )}`}
+                aria-label={`Go to day ${data.day}`}
+                class="bg-primary-700 hover:bg-primary-600 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 h-11 capitalize"
+              >
+                {t.BLOG.title} {data.day}
+              </a>
+            </li>
+          );
+        })
       }
     </SpeedDial>
     <button class="btn flex justify-center items-center rounded-full h-11 w-11">

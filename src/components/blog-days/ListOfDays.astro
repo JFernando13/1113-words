@@ -2,33 +2,48 @@
 import { getCollection } from "astro:content";
 import SmileIcon from "../icons/emojis/SmileIcon.astro";
 
-const allDays = await getCollection("days");
+import { defaultLanguage } from "~/i18n/ui";
+import { getTranslation } from "~/i18n/utils";
+
+const { currentLocale = defaultLanguage } = Astro;
+
+const t = getTranslation(currentLocale);
+
+const allDays = await getCollection("days").then((days) => {
+  return days.filter((day) => {
+    const lang = day.slug.split("/")[0];
+    return lang === currentLocale;
+  });
+});
 ---
 
 <section class="day-container">
   {
-    allDays.map(({ data, slug }) => (
-      <a
-        href={`/days/${slug}`}
-        class="day-card group"
-        aria-label={`Go to day ${data.day}`}
-        role="article"
-      >
-        <header class="day-card-header">
-          <h2 class="text-3xl font-bold group-hover:scale-[1.5] group-hover:-translate-y-12 group-hover:translate-x-4  transition-all duration-500">
-            Day {data.day}
-          </h2>
+    allDays.map(({ data, slug }) => {
+      const [, ...id] = slug.split("/");
+      return (
+        <a
+          href={`/${currentLocale === "es" ? "" : "en/"}days/${id.join("/")}`}
+          class="day-card group"
+          aria-label={`Go to day ${data.day}`}
+          role="article"
+        >
+          <header class="day-card-header">
+            <h2 class="text-3xl font-bold group-hover:scale-[1.5] group-hover:-translate-y-12 group-hover:translate-x-4  transition-all duration-500 capitalize">
+              {t.BLOG.title} {data.day}
+            </h2>
 
-          <SmileIcon class="stroke-secondary-200 transition-colors group-hover:stroke-primary-100" />
-        </header>
+            <SmileIcon class="stroke-secondary-200 transition-colors group-hover:stroke-primary-100" />
+          </header>
 
-        <section class="overflow-scroll flex tag-container gap-2">
-          {data.tags.map((tag) => (
-            <h3 class="tag">{tag}</h3>
-          ))}
-        </section>
-      </a>
-    ))
+          <section class="overflow-scroll flex tag-container gap-2">
+            {data.tags.map((tag) => (
+              <h3 class="tag">{tag}</h3>
+            ))}
+          </section>
+        </a>
+      );
+    })
   }
 </section>
 
