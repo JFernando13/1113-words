@@ -1,0 +1,47 @@
+---
+import ArrowDown from "../icons/ArrowDown.astro";
+
+interface Props {
+  class?: string;
+}
+---
+
+<div
+  class="font-medium text-sm transition-all group z-10 flex flex-col gap-1 day-selector"
+  >
+  <button
+  type="button"
+    class=` w-full gap-x-2 h-11 px-5 bg-primary-700/50 group-hover:bg-primary-700 rounded-lg capitalize flex justify-center items-center ${Astro.props.class}`
+    aria-expanded="true"
+    aria-haspopup="true"
+  >
+    <slot name="btn" />
+  </button>
+  <ul
+    class="group-hover:h-max max-h-[150px] group-hover:animate-fade-down group-hover:animate-duration-300 h-0 overflow-scroll rounded-lg"
+  >
+    <slot />
+  </ul>
+</div>
+
+<style>
+  a + a {
+    @apply border-t-2 border-tertiary-500;
+  }
+
+  .open {
+    @apply h-[150px];
+  }
+</style>
+
+<script>
+  const button = document.querySelectorAll(".day-selector")!;
+
+  button.forEach((button) => {
+    addEventListener("click", () => {
+    const ul = button.querySelector("ul")!;
+
+    ul.classList.toggle("open");
+  })
+  })
+</script>
