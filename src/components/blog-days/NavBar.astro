@@ -4,11 +4,9 @@ import SpeedDial from "../common/SpeedDial.astro";
 import { getCollection } from "astro:content";
 
 const allDays = await getCollection("days");
-
-console.log(allDays);
 ---
 
-<nav class="flex justify-between items-start h-11 w-full">
+<nav class="flex items-start h-11 w-full justify-between">
   <button
     class="btn px-10 h-full bg-primary-600 shadow-btn-secondary rounded-lg hover:bg-primary-500/80"
     >Filters</button
