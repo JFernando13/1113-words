@@ -1,0 +1,38 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+const { titlePage } = Astro.props;
+---
+
+<html lang={Astro.currentLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{titlePage}</title>
+  </head>
+  <body class="animate-fade animate-duration-1000 bg-primary-700">
+    <slot />
+    <div class="bg-page"></div>
+
+    <style is:global>
+      html {
+        color-scheme: dark;
+      }
+
+      body {
+        @apply max-w-4xl m-auto py-16;
+      }
+
+      h1 {
+        @apply text-5xl font-bold text-center mb-8;
+      }
+
+      p {
+        @apply text-lg text-pretty leading-relaxed;
+      }
+    </style>
+  </body>
+</html>
