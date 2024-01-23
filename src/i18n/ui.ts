@@ -24,6 +24,11 @@ export const ui = {
         why: "why this project?",
         who: "who I am?"
       }
+    },
+    BLOG: {
+      title: "day",
+      btn: "show days",
+      btnFilter: "filter"
     }
   },
   es: {
@@ -44,6 +49,11 @@ export const ui = {
         why: "por qué este proyecto?",
         who: "quien soy?"
       }
+    },
+    BLOG: {
+      title: "día",
+      btn: "mostrar dias",
+      btnFilter: "filtrar"
     }
   }
 }
