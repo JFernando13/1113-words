@@ -21,6 +21,9 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<BlogLayout titlePage={`${entry.data.title} - Dia ${entry.data.day}`}>
+<BlogLayout
+  titlePage={`${entry.data.title} - Dia ${entry.data.day}`}
+  title={entry.data.title}
+>
   <Content />
 </BlogLayout>

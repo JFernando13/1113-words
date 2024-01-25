@@ -4,13 +4,14 @@ import { defaultLanguage } from "~/i18n/ui";
 import BlogLayout from "~/layouts/BlogLayout.astro";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("days");
+  const blogEntries = await getCollection("days", (entry) => {
+    return entry.slug.split("/")[0] === "en";
+  });
 
   return blogEntries.map((entry) => {
-    const [lang, ...slug] = entry.slug.split("/");
+    const [, ...slug] = entry.slug.split("/");
 
     return {
-      lang: lang || defaultLanguage,
       params: { slug: slug.join("/") || undefined },
       props: { entry },
     };
@@ -21,6 +22,9 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<BlogLayout titlePage={`${entry.data.title} - Day ${entry.data.day}`}>
+<BlogLayout
+  titlePage={`${entry.data.title} - Day ${entry.data.day}`}
+  title={entry.data.title}
+>
   <Content />
 </BlogLayout>
