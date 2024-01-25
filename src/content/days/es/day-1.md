@@ -1,10 +1,28 @@
 ---
-title: "Mi primera Vez contigo"
-pubDate: 2024-01-23
-tags: ["romance", "miedo"]
+title: "Trazos de soledad en anhelos contenidos"
 day: 1
-mood: "happy"
+pubDate: 2024-01-23
+tags: ["salud mental", "soledad", "inconformismo", "relaciones personales", "aceptación", "frustración", "sueños perdidos", "incertidumbre", "anhelos"]
+mood: "normal"
 ---
+Dormir tiene el potencial de ser un evento traumatizante, especialmente para las personas que día a día están contigo, pero la probabilidad de que algo llegue a suceder es muy diminuta, aunque muchas personas en algún punto de su vida deseen y sueñen con terminar su vida de esa forma.
 
-# Mi Primera vez contigo
-El mundo contigo era un si, pero te fuiste y todo se volvio un no. Y te fuiste y me dejaste a pesar de yo estar contiogo, siempre y en cada momento.
+En mi caso me encuentro en un estado alienación, dejo que mi día se camine por la inmensa cantidad de eventos que surgen en nuestra vida. No le tomo mucha importancia a las cosas que sucedan, por ejemplo, si me toca morir por culpa de una implosión de un submarino, estará bien o si fuera por culpa del infortunio de la vida al no poder despertar después de irme a dormir, seguiría estando bien, por qué son cosas que se salen de mi control.
+
+Lamentablemente en la vida hay muchas cosas que no podemos controlar, muchas cosas que deseamos que surgieran de una forma, pero por razones desconocidas terminan sucediendo de otra manera. Si no sabes como enfrentar esa "pequeña" frustración que produce esa situación, puedes llegar a lugares en las que un ser humano en el siglo XXI no merece vivir. Por eso mi solución, para enfrentar esa sensación, es analizar si en mis manos puede haber una solución, en caso de que no exista, simplemente acepto que en mí no está el cambio y lo dejo pasar como cuál pétalo que se cae de una flor marchita y es arrastrada por el aire que proviene de la atmosfera.
+
+En mi día existen muchas eventualidades que me producen ese sentimiento, hoy por ejemplo, no podía dejar de pensar en Laura, las ganas por hablarle eran sencillamente inevitables, pero ya no puedo hacer algo por solucionarlo, ella decidió irse, por el daño que le estaba causando al hablar conmigo, aunque las únicas palabras que salían de mi boca eran de absoluto amor hacia ella. Es muy triste que las cosas terminen de esa forma, con un pensamiento tan distorsionado de lo que realmente soy, con una idea de mí que está fuera de la realidad. Pero muy a mi pesar, ya no está en mis manos cambiar el pensamiento, por qué prefiero que esté en un lugar lleno de cosas que ella desea a que este conmigo obligándose a hablar. Aunque eso significa que no la pase tan bien en mi día.
+
+Mi despertar fue a las 04:00 con solamente 4 horas de descanso, luego un desayuno carne con plátano, para luego a eso de las 06:00, después de darle un paseo de 30 min a Doky, voy y me quedo frente a una pantalla durante 4 horas desarrollando una aplicación para poder escribir todas esas historias que me recuerden a todo lo que es ella. Posteriormente, cocine unos espaguetis ya pre cocidas junto a un cerdo picado en cuadros pequeños, para que eso fuera el almuerzo que me diera un poco más de energías para volver a pasar 5 horas frente a la pantalla, intentando terminar el desarrollo de esa aplicación.
+
+Estoy constantemente pensando en ella, casi todo lo que sucede en mi vida tiene un trasfondo que hace referencia a ella. Cuando cocino es inevitable no pensarla, por qué esa actividad es una de las cosas que más le encanta hacer, tanto es así que ya lleva 6 meses estudiándolo a unos tantos kilómetros de su tierra natal. El algoritmo de tiktok no se cansa de colocarme videos que hacen referencia a ella y me incitan a intentar volver a escribirle, pero al instante recuerdo que eso para ella sería algo inaceptable y no quiero que las cosas se dañen mucho de lo que ya están con ella.
+
+Mi día a día se vuelve mucho más trágico, porque la situación con ella no es el único inconveniente que tengo con mi vida. No me gustan muchas veces las actitudes que toma mi familia frente a cualquier situación que se les presenta, sea buena o mala, su actitud muchas veces me incomoda o hasta me irrita, pero como dije anteriormente, no puedo hacer nada por cambiarlo, solamente me toca aceptarlo y vivir con ese martirio diariamente.
+
+Hoy afortunadamente no tuve que lidiar con eso, mi mamá tuvo que irse a hacer diligencias todo el día y mi hermano acabo de entrar al colegio, entonces tuve la casa sola durante casi todo el día, lo cual se siente muy agradable, la libertad que te concede la soledad, al menos a mí, me encanta. Espero y los próximos días sean igual de gentiles.
+
+La soledad es algo que disfruto demasiado. El silencio que se produce, la independencia que te genera y el privilegio que te da de poder encaminar tu vida a placer, sin tantos imprevistos. La soledad te permite planear tu día de la forma en la que tú lo desees, sin estar pidiendo permiso o ajustando los horarios con alguien más para que coincidan; no, la soledad tiene ese encanto de darte la oportunidad de tomar tus propias decisiones sin tantos efectos secundarios que afecten a personas que no desees que afecten.
+
+Más, sin embargo, tiene su lado negativo, la soledad, como hoy me sucedió, produce mucho malestar cuando deseas hacer cosas, las cuales necesitas a otra persona para poder lograrla. La soledad no va de la mano de la dependencia a otra persona, y en el mundo que vivimos es muy normal depender de alguien más en muchas ocasiones para realizar cualquier acción en nuestro día. Por ejemplo, hoy tuve ganas de manejar, pero para eso necesitaba a mis padres y no estaban en casa, también quise hablar con Laura; sin embargo, se fue y no creo que quiera volver, también quise salir de la casa, pero nuevamente necesitaba a mis padres y no estaban.
+
+Eso demuestra que estar solo y tener que depender de alguien no es agradable y lamentablemente en mi vida está muy presente esa frustración. Días como hoy hay demasiados, siempre estoy deseando cosas, en las cuales no son muy difícil de cumplirlas, pero necesito a alguien para hacerlas, con lo cual se vuelven imposibles y se salen completamente de mi control y me toca encerrarme en mi cuarto frente una pantalla durante 8 horas para inhibir cualquier deseo que la mente me produzca, porque no puedo hacer algo más para solucionarlo, no está en mis manos cambiar el pensamiento que tiene Laura sobre mí o cambiar la actitud de mis padres o cambiar la cultura de las personas que me rodean. No está en mis manos y me toca tirar el aliento y seguir adelante con las cosas que en gran medida sí tengo control, intentando complacer en pequeña medida esos vagos deseos que yo tengo.
