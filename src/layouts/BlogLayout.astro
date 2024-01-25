@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 
-const { titlePage } = Astro.props;
+const { titlePage, title } = Astro.props;
 ---
 
 <html lang={Astro.currentLocale}>
@@ -14,6 +14,7 @@ const { titlePage } = Astro.props;
     <title>{titlePage}</title>
   </head>
   <body class="animate-fade animate-duration-1000 bg-primary-700">
+    <h1>{title}</h1>
     <slot />
     <div class="bg-page"></div>
 
@@ -23,15 +24,19 @@ const { titlePage } = Astro.props;
       }
 
       body {
-        @apply max-w-4xl m-auto py-16;
+        @apply max-w-4xl m-auto py-24;
       }
 
       h1 {
-        @apply text-5xl font-bold text-center mb-8;
+        @apply text-5xl font-bold text-center mb-12;
       }
 
       p {
         @apply text-lg text-pretty leading-relaxed;
+      }
+
+      p + p {
+        @apply mt-8;
       }
     </style>
   </body>
