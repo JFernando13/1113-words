@@ -1,0 +1,31 @@
+---
+title: "Entre los amores y una dependencia"
+day: 4
+pubDate: 2024-01-26
+tags: ["dependencia", "amor intenso", "autoconocimiento", "emociones", "cotidianidad", "amor incondicional"]
+mood: "emotivo"
+---
+
+Nos encontramos en una burbuja llamada sociedad, en donde tenemos la obligación de interactuar con otras personas, por lo tanto, siempre va a existir la dependencia psicológica o física hacia otra persona. Esa dependencia puede llegar a niveles tan protuberantes que haga que tu comportamiento con tu entorno se modifique dependiendo de si está o no en tu día a día.
+
+Laura para mí es esa persona que hace que cambie por completo la forma en como me relaciono con el mundo material. En general un día conmigo es tal cual así: me levanto cuando mi cuerpo lo decida (me puedo levantar a las 3:00 o a las 9:00) dependiendo de la cantidad de cansancio que tenga acumulado, luego desayuno lo primero que se me ocurra y encuentre en la nevera, normalmente es plátano en sus miles de presentaciones con alguna proteína que me provoque, seguidamente veo videos hasta que me canse y me coloque a programar durante tanto tiempo que cuando quiero mirar el reloj ya es la hora del almuerzo, el cual es preparado por mi madre, luego de almorzar y de ver videos, vuelvo a programar tanto tiempo como mi cuerpo aguante. Llega la cena y el final del día se acerca y lo único interesante que hubo en el día para contar fue que me la pase todo el día sentado en una silla programando.
+
+Pero la vida cuando esta Laura es muy distinta, por qué ya tengo un horario, y me levanto y me acuesto entre un rango de horas especifico, la actitud con la que hago mis actividades rutinarias es distinta, ya hago aseo (de mi cuerpo y de la casa) mucho más seguido, cocino cosas mucho más elaboradas e ingeniosas, busco muchas más actividades que me diviertan y pueda compartir con ella, para así poder tener muchas más cosas interesantes para contar cuando se acabe el día. Tengo una dependencia muy fuerte hacia ella, hace que mis actitudes frente a la vida sean muy distintas. 
+
+La manera de tratar a mis padres cambiaria por completo, fuera una persona que hablara más de sus inconvenientes, comunicara más mis ideas e hiciera un cambio en mi familia, buscaría arreglar cada lugar en donde hay un problema, buscaría más personas con quien conversar y salir a pasar buenos ratos, me dedicara más a fondo a buscar un trabajo, tuviera más empeño y más emoción por las pequeñas cosas que hago en el día.
+
+Cambia mucho mi forma de ser si está ella a cuando no lo está por qué cuando ella no está mi forma de ser es mucho más reservada y pienso que hasta dañina. No es sano ocultar mis problemas, no comunicar lo que pienso, no es sano tener el cuerpo y todo lo que mires desordenado, no es sano pasarme 14 horas al día programando para inhibir un sentimiento, no es sano dormir en promedio 4 horas por tener pesadillas con esos momentos, no es sano mantener la frustración por desear y no poder lograrlo, no es sano comer lo mismo todo el tiempo, no es sano no querer mejorar.
+
+Por mi cuenta no soy capaz de cambiarlo, muchos lo verán como algo malo, me verán como una persona que necesita de los demás para ser mejor y a simple vista eso es lo que parece, pero les puedo decir que puedo vivir y estar mejor sin la necesidad de que Laura este conmigo, la cuestión es que Laura provoca cosas que yo solo no puedo provocarme. Por ejemplo, cuando damos un beso necesitamos a otra persona para efectuarlo, porque de lo contrario no seremos capaces de tener esas sensaciones, si lo intentamos por nuestros propios medios, necesitamos de alguien para sentirnos de esa manera, así mismo me sucede con Laura, necesito de ella para cambiar muchas cosas de mi vida.
+
+¿Ahora la pregunta que se te puede venir a la mente es porque necesitas de ella?, la motivación que dices no la puedes conseguir por tus propios medios? No puedo conseguirla por mis propios medios, Laura tiene todo lo que me gustaría en esta vida, tiene a legacía que me gusta, el desorden que tolero, la felicidad y el amor que me cautiva, la madurez que necesito y el cuidado que debo de tener. Esas cosas no las puedo conseguir yo solo, por qué en el lugar que me encuentro yo no soy así y ninguno de los que me rodea tiene todo lo que ella tiene. 
+
+Por eso la quiero tanto en mi vida, me da absolutamente todo lo que busco. ¿Pudiera buscar a alguien más que me diera algo mejor y seguramente la podre encontrar, pero para que buscar algo más si existe ella? ¿Para que darme a la ardua tarea de dar otra vez en el punto con alguien como ella?, prefiero quedarme e intentar arreglar las cosas, aunque cada vez estén yendo a peor, prefiero estar aquí, aferrado al amor que le tengo, hasta que un día podamos volver a hablar.
+
+Mi amor por ella siempre estará intacto, de la forma en la que me trate, yo siempre la amaré con la misma cantidad, porque no se trata de como me trata, sino que se trata de lo que es ella, me explico. Amo su esencia, su manera de ser con las personas y con ella misma, amo su vida y el entorno que la rodea, amo sus defectos, amo su normalidad, amo sus emociones, amo sus traumas, amo todo lo que es ella y no la forma en la que me tratase.
+
+No puedo basarme en su trato porque no es bueno, ella está constantemente rechazándome, constantemente está diciéndome que la deje en paz, que lo único que hago es hacerle daño y molestarla, que soy una persona tóxica e intensa. Para ella soy lo peor y de esa forma me trata, pero he intentado que logre ver que no soy así, por momentos lo he conseguido, pero siempre recae en el mismo pensamiento, así si fuera por el trato que me brinda ya me hubiese olvidado de ella hace mucho tiempo.
+
+Yo realmente la amo tanto como para tolerar todas esas palabras tan aberrantes y dañinas hacia mí, puedo aceptar que no quiere compartir la vida conmigo, puedo aguantar sus malas caras, sus incoherencias, sus confusiones, puedo aguantar sus defectos, puedo aguantar que no me quiera, puedo tener una vida tranquila a pesar de todo eso, sencillamente porque amo la amo, con todo el significado de la palabra.
+
+Un consejo para sus vidas, amen como locos, enamórense y denlo todo por la otra persona, sin importar como sea su trato. Amen con locura y mucha pasión. Besos
