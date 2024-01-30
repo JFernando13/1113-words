@@ -1,5 +1,5 @@
 ---
-title: "Grateful to be a part of your journey".
+title: "Grateful to be a part of your journey"
 day: 5
 pubDate: 2024-01-27
 tags: ["love", "relationships", "intensity", "fear", "hope", "reflection", "personal growth"]
