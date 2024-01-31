@@ -2,7 +2,7 @@
 title: "Miedos que no dejan admirar la belleza de lo simple"
 day: 6
 pubDate: 2024-01-28
-tags: ["love", "relaciones", "aceptación", "experiencias", "cambios", "transformaciones", "superacion personal", "desarrollo personal",  "felicidad", "motivacion"]
+tags: ["amor", "relaciones", "aceptación", "experiencias", "cambios", "transformaciones", "superacion personal", "desarrollo personal",  "felicidad", "motivacion"]
 mood: "muy feliz"
 ---
 
