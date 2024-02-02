@@ -1,5 +1,5 @@
 ---
-title: "Aprendiendo a vivir entro el blanco y el negro"
+title: "Aprendiendo a vivir entre el blanco y el negro"
 day: 8
 pubDate: 2024-01-30
 tags: ["amor", "soledad", "autodescubrimiento", "autenticidad", "cambios", "cambios", "rutina", "habitos",  "desafios"]
