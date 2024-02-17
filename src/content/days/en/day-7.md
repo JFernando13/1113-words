@@ -1,5 +1,5 @@
 ---
-title: "When no one can understand you
+title: "When no one can understand you"
 day: 7
 pubDate: 2024-01-29
 tags: ["misunderstanding", "venting", "dreams", "hopes", "listening", "reflection", "love", "advice" ]
