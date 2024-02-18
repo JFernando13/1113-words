@@ -1,0 +1,95 @@
+---
+import { getTranslation } from "~/i18n/utils";
+import type { TDay } from "~/types/day";
+import SmileIcon from "~/icons/emojis/SmileIcon.astro";
+
+interface Props {
+  data: TDay;
+  id: string;
+}
+
+const currentLocale = Astro.currentLocale;
+const t = getTranslation(currentLocale ?? "es");
+
+const { data, id } = Astro.props;
+
+const favorites: TDay[] = [
+  {
+    title: "title",
+    pubDate: "pubDate",
+    tags: ["tag"],
+    day: 1,
+    mood: "mood",
+  },
+  {
+    title: "title",
+    pubDate: "pubDate",
+    tags: ["tag"],
+    day: 5,
+    mood: "mood",
+  },
+];
+---
+
+<a
+  href={`/${currentLocale === "es" ? "" : "en/"}days/${id}`}
+  class="day-card group"
+  aria-label={`Go to day ${data.day}`}
+  role="article"
+>
+  <main class="flex flex-col gap-2">
+    <header class="flex justify-between items-center">
+      <p class="day flex items-center gap-2">
+        <span class="text-gray-300 text-sm">{t.BLOG.CARD.day} {data.day}</span>
+        <span class="text-xs font-thin text-gray-400">{data.pubDate}</span>
+      </p>
+      <SmileIcon
+        class:list={[
+          "stroke-gray-400 transition-colors group-hover:stroke-gray-200",
+          {
+            "stroke-[#efb810] group-hover:stroke-[#efb810aa]": favorites.some(
+              (day) => day.day === data.day,
+            ),
+          },
+        ]}
+      />
+    </header>
+    <h2 class="text-2xl text-primary-200 font-bold">
+      {data.title}
+    </h2>
+  </main>
+  <section class="flex gap-2 overflow-scroll tag-container">
+    {
+      data.tags.map((tag) => {
+        return <span class="tag">{tag}</span>;
+      })
+    }
+  </section>
+</a>
+
+<style>
+  .day-card {
+    @apply flex flex-col justify-between px-8 py-7 h-full max-w-[500px] rounded-lg bg-primary-700 gap-6 shadow-card-primary;
+  }
+
+  .day-card-header {
+    @apply flex justify-between;
+  }
+
+  .tag-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .day:nth-child(1) {
+    text-transform: capitalize;
+  }
+
+  .tag {
+    box-shadow: 0px 0px 6px 0px rgba(15, 18, 27, 0.5) inset;
+    @apply px-4 rounded-full py-1 bg-secondary-600 text-secondary-300 text-xs capitalize transition-colors text-nowrap;
+
+    &:hover {
+      @apply bg-secondary-500;
+    }
+  }
+</style>

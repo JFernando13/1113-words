@@ -1,19 +1,25 @@
 ---
 import { getCollection } from "astro:content";
 import SmileIcon from "../icons/emojis/SmileIcon.astro";
+import ArrowRightIcon from "../icons/navegation/ArrowRightIcon.astro";
+import ArrowLeftIcon from "../icons/navegation/ArrowLeftIcon.astro";
 
 import { defaultLanguage } from "~/i18n/ui";
 import { getTranslation } from "~/i18n/utils";
+import CardDay from "./CardDay.astro";
 
 const { currentLocale = defaultLanguage } = Astro;
 
 const t = getTranslation(currentLocale);
 
 const allDays = await getCollection("days").then((days) => {
-  return days.filter((day) => {
-    const lang = day.slug.split("/")[0];
-    return lang === currentLocale;
-  });
+  return days
+    .filter((day) => {
+      const lang = day.slug.split("/")[0];
+      return lang === currentLocale;
+    })
+    .toSorted((a, b) => a.data.day - b.data.day)
+    .slice(0, 6);
 });
 ---
 
@@ -21,56 +27,33 @@ const allDays = await getCollection("days").then((days) => {
   {
     allDays.map(({ data, slug }) => {
       const [, ...id] = slug.split("/");
-      return (
-        <a
-          href={`/${currentLocale === "es" ? "" : "en/"}days/${id.join("/")}`}
-          class="day-card group"
-          aria-label={`Go to day ${data.day}`}
-          role="article"
-        >
-          <header class="day-card-header">
-            <h2 class="text-3xl font-bold group-hover:scale-[1.5] group-hover:-translate-y-12 group-hover:translate-x-4  transition-all duration-500 capitalize">
-              {t.BLOG.title} {data.day}
-            </h2>
 
-            <SmileIcon class="stroke-secondary-200 transition-colors group-hover:stroke-primary-100" />
-          </header>
-
-          <section class="overflow-scroll flex tag-container gap-2">
-            {data.tags.map((tag) => (
-              <h3 class="tag">{tag}</h3>
-            ))}
-          </section>
-        </a>
-      );
+      return <CardDay data={data} id={id.join("/")} />;
     })
   }
 </section>
 
+<!-- Navegation -->
+<!-- <section class="flex justify-evenly">
+  <button>
+    <ArrowLeftIcon />
+  </button>
+  <button>
+    <ArrowRightIcon />
+  </button>
+</section> -->
+
 <style>
   .day-container {
-    grid-template-columns: repeat(auto-fill, minmax(min(45vw, 300px), 1fr));
-    @apply grid gap-4 gap-y-12 my-14 relative cursor-pointer;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    @apply grid gap-4 gap-y-12 my-14 relative cursor-pointer place-items-center;
   }
 
-  .day-card {
-    @apply p-6 rounded-lg bg-secondary-base flex flex-col gap-4 shadow-card-primary;
-  }
-
-  .day-card-header {
-    @apply flex justify-between;
-  }
-
-  .tag-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tag {
-    box-shadow: 0px 0px 6px 0px rgba(15, 18, 27, 0.5) inset;
-    @apply px-4 rounded-full py-1 bg-tertiary-600 text-tertiary-300 text-xs w-max capitalize transition-colors text-nowrap;
+  button {
+    @apply rounded-full h-12 w-12 bg-[#2A3041] flex justify-center items-center text-xs transition-colors;
 
     &:hover {
-      @apply bg-tertiary-500;
+      @apply bg-[#47506A];
     }
   }
 </style>
