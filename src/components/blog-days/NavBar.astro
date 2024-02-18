@@ -2,20 +2,28 @@
 import FavoritesIcon from "../icons/FavoriteIcon.astro";
 import SpeedDial from "../common/SpeedDial.astro";
 
+import FavoriteMenu from "./FavoriteMenu.astro";
+
 import { defaultLanguage } from "~/i18n/ui";
 import { getTranslation } from "~/i18n/utils";
 import { getCollection } from "astro:content";
+import type { TDay } from "~/types/day";
+import CardDay from "./CardDay.astro";
 
 const { currentLocale = defaultLanguage } = Astro;
 
 const t = getTranslation(currentLocale ?? "es");
 
 const allDays = await getCollection("days").then((days) => {
-  return days.filter((day) => {
-    const lang = day.slug.split("/")[0];
-    return lang === currentLocale;
-  });
+  return days
+    .filter((day) => {
+      const lang = day.slug.split("/")[0];
+      return lang === currentLocale;
+    })
+    .toSorted((a, b) => a.data.day - b.data.day);
 });
+
+const openFavorites = false;
 ---
 
 <nav class="flex justify-between items-start h-11 w-full">
@@ -40,7 +48,7 @@ const allDays = await getCollection("days").then((days) => {
                 aria-label={`Go to day ${data.day}`}
                 class="bg-primary-700 hover:bg-primary-600 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 h-11 capitalize"
               >
-                {t.BLOG.title} {data.day}
+                {t.BLOG.CARD.day} {data.day}
               </a>
             </li>
           );
@@ -53,7 +61,14 @@ const allDays = await getCollection("days").then((days) => {
   </article>
 </nav>
 
+{openFavorites && <FavoriteMenu />}
+
 <style>
+  .day-container {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    @apply grid gap-4 gap-y-12 relative cursor-pointer;
+  }
+
   article button {
     @apply bg-primary-700/90 font-medium shadow-btn-primary;
 
