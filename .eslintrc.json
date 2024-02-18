@@ -1,0 +1,24 @@
+{
+  // ...
+  "extends": [
+    // ...
+    "plugin:astro/recommended"
+  ],
+  // ...
+  "overrides": [
+    {
+      "files": ["*.astro", "*.ts", "*.tsx"],
+      // ...
+      "rules": {
+        // ...
+      }
+    }
+    // ...
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  }
+}
