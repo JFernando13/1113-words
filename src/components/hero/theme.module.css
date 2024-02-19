@@ -1,0 +1,9 @@
+.theme {
+  @apply h-11 w-11 bg-primary-600;
+
+  &:hover {
+    box-shadow: 0px 0px 8px 4px #1d222f inset;
+    transform: scale(0.95);
+    @apply bg-primary-500;
+  }
+}
