@@ -1,16 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import SmileIcon from "../icons/emojis/SmileIcon.astro";
-import ArrowRightIcon from "../icons/navegation/ArrowRightIcon.astro";
-import ArrowLeftIcon from "../icons/navegation/ArrowLeftIcon.astro";
 
 import { defaultLanguage } from "~/i18n/ui";
-import { getTranslation } from "~/i18n/utils";
-import CardDay from "./CardDay.astro";
+import { CardDay } from "./CardDay.tsx";
 
 const { currentLocale = defaultLanguage } = Astro;
-
-const t = getTranslation(currentLocale);
 
 const allDays = await getCollection("days").then((days) => {
   return days
@@ -28,7 +22,14 @@ const allDays = await getCollection("days").then((days) => {
     allDays.map(({ data, slug }) => {
       const [, ...id] = slug.split("/");
 
-      return <CardDay data={data} id={id.join("/")} />;
+      return (
+        <CardDay
+          data={data}
+          id={id.join("/")}
+          currentLocale={currentLocale}
+          client:load
+        />
+      );
     })
   }
 </section>
