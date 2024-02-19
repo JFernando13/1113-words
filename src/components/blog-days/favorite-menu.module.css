@@ -1,0 +1,12 @@
+.day-container {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  @apply grid gap-4 gap-y-12 relative cursor-pointer;
+}
+
+.close-btn {
+  @apply rounded-full h-8 w-8 bg-[#2A3041] flex justify-center items-center transition-colors;
+
+  &:hover {
+    @apply bg-[#47506A];
+  }
+}
