@@ -1,14 +1,10 @@
 ---
-import FavoritesIcon from "../icons/FavoriteIcon.astro";
+import { FavoriteBtn } from "./FavoriteBtn";
 import SpeedDial from "../common/SpeedDial.astro";
-
-import FavoriteMenu from "./FavoriteMenu.astro";
 
 import { defaultLanguage } from "~/i18n/ui";
 import { getTranslation } from "~/i18n/utils";
 import { getCollection } from "astro:content";
-import type { TDay } from "~/types/day";
-import CardDay from "./CardDay.astro";
 
 const { currentLocale = defaultLanguage } = Astro;
 
@@ -22,8 +18,6 @@ const allDays = await getCollection("days").then((days) => {
     })
     .toSorted((a, b) => a.data.day - b.data.day);
 });
-
-const openFavorites = false;
 ---
 
 <nav class="flex justify-between items-start h-11 w-full">
@@ -55,13 +49,9 @@ const openFavorites = false;
         })
       }
     </SpeedDial>
-    <button class="btn flex justify-center items-center rounded-full h-11 w-11">
-      <FavoritesIcon />
-    </button>
+    <FavoriteBtn client:visible />
   </article>
 </nav>
-
-{openFavorites && <FavoriteMenu />}
 
 <style>
   .day-container {

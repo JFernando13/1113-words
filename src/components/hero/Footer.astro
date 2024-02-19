@@ -12,7 +12,7 @@ const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
   class="flex items-center w-full flex-wrap-reverse md:justify-between justify-center gap-6"
 >
   <!-- Interesting Links -->
-  <article class="text-secondary-500 flex gap-4 items-center capitalize">
+  <article class="dark:text-secondary-500 flex gap-4 items-center capitalize">
     <a href="/why" class="interested-link transition-duration-300"
       >{t.FOOTER.links.why}</a
     >
@@ -23,7 +23,7 @@ const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
   </article>
 
   <!-- Redes -->
-  <article class="text-secondary-500 flex gap-8">
+  <article class="dark:text-secondary-500 flex gap-8">
     <GithubIcon class="redes transition-duration-300" />
     <LinkedlnIcon class="redes transition-duration-300" />
     <InstagramIcon class="redes transition-duration-300" />
