@@ -1,10 +1,14 @@
 ---
 import LanguageSelector from "./LanguageSelector.astro";
 import { Theme } from "./Theme.tsx";
+
+import Logo from "~/icons/brand/Logo.astro";
 ---
 
 <nav class="flex justify-between w-full items-start h-11">
-  <a class="text-primary-200">III3 words</a>
+  <a class="text-primary-500 dark:text-primary-100">
+    <Logo />
+  </a>
 
   <article class="flex gap-4">
     <LanguageSelector />
