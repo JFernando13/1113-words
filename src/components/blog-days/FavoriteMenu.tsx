@@ -14,10 +14,10 @@ export function FavoriteMenu({ closeMenu }: Props) {
 
   return (
     <aside
-      className="fixed top-0 left-0 h-full bg-[#0002] w-full z-10 backdrop-blur-sm flex justify-end overflow-x-hidden overflow-y-auto"
+      className="fixed top-0 left-0 h-full overflow-scroll bg-[#0002] w-full z-10 backdrop-blur-2xl flex justify-end"
       onClick={closeMenu}
     >
-      <main className="bg-black xl:w-2/6 w-full p-8 flex flex-col gap-10">
+      <main className="bg-primary-600 dark:bg-primary-700 xl:w-2/6 w-full p-8 flex flex-col gap-10 h-full overflow-scroll">
         <header className="flex gap-4 items-center">
           <button className={styles["favorite-btn"]} onClick={closeMenu}>
             <CloseIcon />
