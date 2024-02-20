@@ -33,6 +33,7 @@ export const ui = {
       CARD: {
         day: "day",
       },
+      btnBack: "back",
     },
   },
   es: {
@@ -61,6 +62,7 @@ export const ui = {
       CARD: {
         day: "día",
       },
+      btnBack: "volver",
     },
   },
 };
