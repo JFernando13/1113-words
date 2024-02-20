@@ -1,10 +1,7 @@
-import { useEffect } from "react";
 import { DarkIcon } from "../icons/theme/DarkIcon";
 import { LightIcon } from "../icons/theme/LightIcon";
 
 import { useState } from "react";
-
-import styles from "./theme.module.css";
 
 export function Theme() {
   const [theme, setTheme] = useState(() => {
@@ -27,7 +24,7 @@ export function Theme() {
 
   return (
     <button
-      className={`btn flex justify-center items-center rounded-full ${styles.theme}`}
+      className={`btn flex justify-center items-center rounded-full hover:shadow-inner h-11 w-11 dark:bg-primary-700 bg-secondary-500`}
       onClick={toggleTheme}
     >
       {theme === "light" ? <LightIcon /> : <DarkIcon />}
