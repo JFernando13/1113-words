@@ -19,11 +19,29 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+import { getTranslation } from "~/i18n/utils";
+
+const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
 ---
 
 <BlogLayout
   titlePage={`${entry.data.title} - Dia ${entry.data.day}`}
   title={entry.data.title}
 >
+  <p slot="title" class="text-pretty text-sm flex gap-4 items-center">
+    <span class="text-primary-400 dark:text-primary-300"
+      >{entry.data.pubDate}</span
+    >
+    •
+    <span
+      class="text-primary-500 dark:text-primary-200 font-bold text-lg capitalize"
+      >{t.BLOG.CARD.day} {entry.data.day}</span
+    >
+    •
+    <span class="text-primary-400 dark:text-primary-300 capitalize"
+      >{entry.data.mood}</span
+    >
+  </p>
   <Content />
 </BlogLayout>

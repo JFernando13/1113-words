@@ -1,7 +1,13 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import ArrowLeftIcon from "~/components/icons/navegation/ArrowLeftIcon.astro";
+
+import { defaultLanguage } from "~/i18n/ui";
+import { getTranslation } from "~/i18n/utils";
 
 const { titlePage, title } = Astro.props;
+
+const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
 ---
 
 <html lang={Astro.currentLocale}>
@@ -13,10 +19,21 @@ const { titlePage, title } = Astro.props;
     <ViewTransitions />
     <title>{titlePage}</title>
   </head>
-  <body class="animate-fade animate-duration-1000 bg-primary-700">
-    <h1>{title}</h1>
+  <body
+    class="animate-fade animate-duration-1000 dark:bg-primary-700 max-lg:px-12"
+  >
+    <a
+      href={`/${Astro.currentLocale === "es" ? "" : "en"}`}
+      class="rounded-full bg-primary-600 text-primary-100 dark:bg-primary-100 dark:text-primary-600 px-4 py-2 gap-1 mb-10 flex justify-center w-max hover:bg-primary-500 dark:hover:bg-primary-200 transition-colors"
+    >
+      <ArrowLeftIcon />
+      <span class="capitalize">{t.BLOG.btnBack}</span>
+    </a>
+    <hgroup class="flex justify-center flex-col items-center mb-10 gap-2">
+      <h1>{title}</h1>
+      <slot name="title" />
+    </hgroup>
     <slot />
-    <div class="bg-page"></div>
 
     <style is:global>
       html {
@@ -28,7 +45,7 @@ const { titlePage, title } = Astro.props;
       }
 
       h1 {
-        @apply text-5xl font-bold text-center mb-12;
+        @apply text-5xl font-bold text-center;
       }
 
       p {
@@ -38,6 +55,42 @@ const { titlePage, title } = Astro.props;
       p + p {
         @apply mt-8;
       }
+
+      body {
+        background: linear-gradient(
+          to top,
+          var(--from-linear-color) 50%,
+          var(--to-linear-color)
+        );
+        background-color: var(--bg-color);
+        height: 100%;
+        min-height: 100vh;
+        color: var(--text-color);
+        font-weight: 500;
+      }
+
+      :root.dark {
+        --from-linear-color: #0f121b;
+        --to-linear-color: #2a3041;
+
+        --text-color: #b8bed3;
+
+        --bg-color: #0f121b;
+      }
+
+      :root {
+        --from-linear-color: #7c85a0;
+        --to-linear-color: #e2e9ff;
+
+        --text-color: #2a3041;
+
+        --bg-color: #7c85a0;
+      }
     </style>
+    <script>
+      const theme = localStorage.getItem("color-theme") || "dark";
+
+      window.document.documentElement.setAttribute("class", theme);
+    </script>
   </body>
 </html>
