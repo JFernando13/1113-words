@@ -22,12 +22,14 @@ const allDays = await getCollection("days").then((days) => {
 
 <nav class="flex justify-between items-start h-11 w-full">
   <button
-    class="btn px-10 h-full bg-primary-600 shadow-btn-secondary rounded-lg hover:bg-primary-500/80 capitalize"
+    class="btn px-10 h-full bg-secondary-500 hover:bg-secondary-400 dark:bg-primary-600 rounded-lg dark:hover:bg-primary-600/50 capitalize"
     >{t.BLOG.btnFilter}</button
   >
 
   <article class="flex gap-4 items-baseline">
-    <SpeedDial>
+    <SpeedDial
+      class="bg-secondary-500 group-hover:bg-secondary-400 dark:bg-primary-600 dark:group-hover:bg-primary-600/50"
+    >
       <span class="capitalize" slot="btn">{t.BLOG.btn}</span>
       {
         allDays.map(({ data, slug }) => {
@@ -40,7 +42,7 @@ const allDays = await getCollection("days").then((days) => {
                   "/",
                 )}`}
                 aria-label={`Go to day ${data.day}`}
-                class="bg-primary-700 hover:bg-primary-600 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 h-11 capitalize"
+                class="bg-secondary-300 hover:bg-secondary-400 dark:bg-primary-600 dark:hover:bg-primary-700 whitespace-no-wrap inline-flex justify-center items-center w-full gap-x-2 h-11 capitalize"
               >
                 {t.BLOG.CARD.day} {data.day}
               </a>
@@ -57,13 +59,5 @@ const allDays = await getCollection("days").then((days) => {
   .day-container {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     @apply grid gap-4 gap-y-12 relative cursor-pointer;
-  }
-
-  article button {
-    @apply bg-primary-700/90 font-medium shadow-btn-primary;
-
-    &:hover {
-      @apply bg-primary-600;
-    }
   }
 </style>

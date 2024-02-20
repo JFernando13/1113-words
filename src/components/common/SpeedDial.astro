@@ -9,7 +9,7 @@ interface Props {
 >
   <button
     type="button"
-    class=` w-full gap-x-2 h-11 px-5 bg-primary-700/50 group-hover:bg-primary-700 rounded-lg capitalize flex justify-center items-center ${Astro.props.class ?? ""}`
+    class=` w-full gap-x-2 h-11 px-5 rounded-lg capitalize flex justify-center items-center transition-all ${Astro.props.class ?? ""}`
     aria-expanded="true"
     aria-haspopup="true"
   >
@@ -24,7 +24,7 @@ interface Props {
 
 <style>
   a + a {
-    @apply border-t-2 border-secondary-500;
+    @apply border-t-2 border-secondary-300 dark:border-secondary-500;
   }
 
   .open {

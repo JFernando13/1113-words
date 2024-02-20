@@ -1,7 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
 import SpeedDial from "../common/SpeedDial.astro";
-import { defaultLanguage } from "~/i18n/ui";
 const { currentLocale } = Astro;
 
 const getRestUrl = (url: string) => {
@@ -28,7 +27,9 @@ const currentLanguage = languages.find((lang) => lang.code === currentLocale);
 const otherLanguages = languages.filter((lang) => lang.code !== currentLocale);
 ---
 
-<SpeedDial class="gap-4">
+<SpeedDial
+  class="dark:bg-primary-700 bg-secondary-500 hover:bg-secondary-400 dark:hover:bg-primary-600/90 transition-all"
+>
   <div class="flex gap-2" slot="btn">
     <span>{currentLanguage?.flag}</span>
     <span>{currentLanguage?.name}</span>
@@ -38,7 +39,7 @@ const otherLanguages = languages.filter((lang) => lang.code !== currentLocale);
       <li>
         <a
           href={lang.href}
-          class="bg-primary-700/30 hover:bg-primary-700/70 whitespace-no-wrap flex items-center justify-center w-full gap-x-2 h-11 hover:font-semibold transition-all"
+          class="hover:bg-primary-500/50 bg-secondary-400 dark:bg-primary-700/30 dark:hover:bg-primary-700/10 whitespace-no-wrap flex items-center justify-center w-full gap-x-2 h-11 hover:font-semibold transition-all"
         >
           <span>{lang?.flag}</span>
           <span>{lang?.name}</span>
