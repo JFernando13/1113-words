@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 import type { TDay } from "~/types/day";
 
 type State = {
@@ -11,22 +12,27 @@ type Action = {
   removeFavorite: (day: number) => void;
 };
 
-export const useFavoriteStore = create<State & Action>((set, get) => ({
-  favorites: [],
-  addFavorite: (newDay: TDay) => {
-    console.log(newDay);
-
-    set(() => {
-      return {
-        favorites: [...get().favorites, newDay],
-      };
-    });
-  },
-  removeFavorite: (day: number) => {
-    set(() => ({
-      favorites: get().favorites.filter(
-        (favorite: TDay) => favorite.day !== day,
-      ),
-    }));
-  },
-}));
+export const useFavoriteStore = create<State & Action>(
+  persist(
+    (set, get) => ({
+      favorites: [],
+      addFavorite: (newDay: TDay) => {
+        set(() => {
+          return {
+            favorites: [...get().favorites, newDay],
+          };
+        });
+      },
+      removeFavorite: (day: number) => {
+        set(() => ({
+          favorites: get().favorites.filter(
+            (favorite: TDay) => favorite.day !== day,
+          ),
+        }));
+      },
+    }),
+    {
+      name: "favorite-store",
+    },
+  ),
+);
