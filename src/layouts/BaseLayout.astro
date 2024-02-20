@@ -17,9 +17,8 @@ const { titlePage } = Astro.props;
     <ViewTransitions />
     <title>{titlePage}</title>
   </head>
-  <body class="animate-fade animate-duration-1000 bg-primary-700">
+  <body class="animate-fade animate-duration-1000 dark:bg-primary-700">
     <slot />
-    <div class="bg-page"></div>
 
     <style is:global>
       html {
@@ -27,35 +26,29 @@ const { titlePage } = Astro.props;
         scroll-behavior: smooth;
       }
 
-      :root.dark {
-        --first-color: rgb(55, 65, 81);
-        --second-color: rgb(17, 24, 39);
-        --third-color: rgb(0, 0, 0);
+      body {
+        background: linear-gradient(
+          to top,
+          var(--from-linear-color) 50%,
+          var(--to-linear-color)
+        );
+        background-color: var(--bg-color);
+        height: 100%;
+        min-height: 100vh;
+      }
 
-        --primary-color-200: #b8bed3;
+      :root.dark {
+        --from-linear-color: #0f121b;
+        --to-linear-color: #2a3041;
+
+        --bg-color: #0f121b;
       }
 
       :root {
-        --first-color: rgb(255, 255, 255);
-        --second-color: rgb(55, 65, 81);
-        --third-color: rgb(0, 0, 0);
+        --from-linear-color: #7c85a0;
+        --to-linear-color: #e2e9ff;
 
-        --primary-color-200: #2a3041;
-      }
-
-      .bg-page {
-        background-image: radial-gradient(
-          at center top,
-          var(--first-color),
-          var(--second-color),
-          var(--third-color)
-        );
-
-        min-height: 100vh;
-        position: fixed;
-        top: 0;
-        z-index: -10;
-        width: 100%;
+        --bg-color: #7c85a0;
       }
 
       .section {
@@ -63,7 +56,7 @@ const { titlePage } = Astro.props;
       }
 
       .btn {
-        @apply transition-all duration-300 ease-out shadow-btn-primary;
+        @apply transition-all duration-300 ease-out;
       }
     </style>
   </body>
