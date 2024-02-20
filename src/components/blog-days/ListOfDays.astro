@@ -12,8 +12,8 @@ const allDays = await getCollection("days").then((days) => {
       const lang = day.slug.split("/")[0];
       return lang === currentLocale;
     })
-    .toSorted((a, b) => a.data.day - b.data.day)
-    .slice(0, 6);
+    .toSorted((a, b) => a.data.day - b.data.day);
+  // .slice(0, 6);
 });
 ---
 
