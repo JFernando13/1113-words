@@ -26,7 +26,7 @@ const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
     </p>
   </hgroup>
   <a
-    href="/#days"
+    href=`${Astro.url.pathname}#days`
     class="px-8 py-2 rounded-md bg-secondary-500 hover:bg-secondary-400 dark:bg-primary-700 font-medium dark:hover:bg-secondary-700/50 transition-colors select-none flex gap-2 items-center group"
   >
     <span class="group-hover:animate-pulse capitalize">{t.HERO.btn}</span>
