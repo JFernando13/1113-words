@@ -15,11 +15,18 @@ const allDays = await getCollection("days").then((days) => {
     .toSorted((a, b) => a.data.day - b.data.day);
   // .slice(0, 6);
 });
+
+const filteredDays = allDays.filter((day) => {
+  if (Astro.url.searchParams.get("tags")) {
+    return day.data.tags.includes(Astro.url.searchParams.get("tags"));
+  }
+  return true;
+});
 ---
 
 <section class="day-container">
   {
-    allDays.map(({ data, slug }) => {
+    filteredDays.map(({ data, slug }) => {
       const [, ...id] = slug.split("/");
 
       return (

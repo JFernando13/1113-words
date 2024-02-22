@@ -18,13 +18,38 @@ const allDays = await getCollection("days").then((days) => {
     })
     .toSorted((a, b) => a.data.day - b.data.day);
 });
+
+const filteredTags = [
+  ...new Set(allDays.map((entry) => entry.data.tags).flat()),
+];
 ---
 
 <nav class="flex justify-between items-start h-11 w-full">
-  <button
-    class="btn px-10 h-full bg-secondary-500 hover:bg-secondary-400 dark:bg-primary-600 rounded-lg dark:hover:bg-primary-600/50 capitalize"
-    >{t.BLOG.btnFilter}</button
-  >
+  <div class="group relative h-full">
+    <button
+      class="btn px-10 h-full bg-secondary-500 hover:bg-secondary-400 dark:bg-primary-600 rounded-lg dark:hover:bg-primary-600/50 capitalize w-max"
+      >{t.BLOG.btnFilter}</button
+    >
+
+    <ul
+      class="z-20 h-0 max-h-[300px] overflow-scroll rounded-lg group-hover:h-max group-hover:animate-duration-300 absolute bg-secondary-500 dark:bg-primary-600 group-hover:p-4 grid grid-cols-3 w-max scale-0 group-hover:scale-100 transition-all origin-top-left duration-500"
+    >
+      {
+        filteredTags.map((tag) => {
+          return (
+            <li>
+              <a
+                href={`${Astro.url.pathname}?tags=${tag}`}
+                class="bg-secondary-300 hover:bg-secondary-400 dark:bg-primary-600 dark:hover:bg-primary-700 flex py-2 px-4 capitalize w-full rounded-full justify-center"
+              >
+                {tag}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
 
   <article class="flex gap-4 items-baseline">
     <SpeedDial
