@@ -14,7 +14,7 @@ export function FavoriteMenu({ closeMenu }: Props) {
 
   return (
     <aside
-      className="fixed top-0 left-0 h-full overflow-scroll bg-[#0002] w-full z-10 backdrop-blur-2xl flex justify-end"
+      className="fixed z-20 top-0 left-0 h-full overflow-scroll bg-[#0F121Bcc] backdrop-blur-md w-full flex justify-end"
       onClick={closeMenu}
     >
       <main className="bg-primary-600 dark:bg-primary-700 xl:w-2/6 w-full p-8 flex flex-col gap-10 h-full overflow-scroll">
