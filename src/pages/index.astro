@@ -1,5 +1,26 @@
 ---
-import App from "~/components/pages/App.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import ListOfDays from "~/components/blog-days/ListOfDays.astro";
+import NavBarBlog from "~/components/blog-days/NavBar.astro";
+import Footer from "~/components/hero/Footer.astro";
+import Main from "~/components/hero/Main.astro";
+import NavBar from "~/components/hero/NavBar.astro";
+
+import { defaultLanguage } from "~/i18n/ui";
+import { getTranslation } from "~/i18n/utils";
+
+const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
 ---
 
-<App />
+<BaseLayout titlePage={t.SEO.title}>
+  <header class="section flex flex-col justify-between items-center">
+    <NavBar />
+    <Main />
+    <Footer />
+  </header>
+
+  <section id="days" class="section">
+    <NavBarBlog />
+    <ListOfDays />
+  </section>
+</BaseLayout>

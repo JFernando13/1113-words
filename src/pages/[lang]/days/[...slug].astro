@@ -1,46 +1,43 @@
 ---
-import { defaultLanguage } from "~/i18n/ui";
 import { getCollection } from "astro:content";
+import { defaultLanguage } from "~/i18n/ui";
 import BlogLayout from "~/layouts/BlogLayout.astro";
 import { getTranslation } from "~/i18n/utils";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("days", (entry) => {
-    return entry.slug.split("/")[0] === "en";
+  const pages = await getCollection("days");
+
+  const paths = pages.map((page) => {
+    const [lang, ...slug] = page.slug.split("/");
+    return { params: { lang, slug: slug.join("/") || undefined }, props: page };
   });
 
-  return blogEntries.map((entry) => {
-    const [, ...slug] = entry.slug.split("/");
-
-    return {
-      params: { slug: slug.join("/") || undefined },
-      props: { entry },
-    };
-  });
+  return paths;
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const page = Astro.props;
+
+const { Content } = await page.render();
 
 const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
 ---
 
 <BlogLayout
-  titlePage={`${entry.data.title} - Dia ${entry.data.day}`}
-  title={entry.data.title}
+  titlePage={`${page.data.title} - Dia ${page.data.day}`}
+  title={page.data.title}
 >
   <p slot="title" class="text-pretty text-sm flex gap-4 items-center">
     <span class="text-primary-400 dark:text-primary-300"
-      >{entry.data.pubDate}</span
+      >{page.data.pubDate}</span
     >
     •
     <span
       class="text-primary-500 dark:text-primary-200 font-bold text-lg capitalize"
-      >{t.BLOG.CARD.day} {entry.data.day}</span
+      >{t.BLOG.CARD.day} {page.data.day}</span
     >
     •
     <span class="text-primary-400 dark:text-primary-300 capitalize"
-      >{entry.data.mood}</span
+      >{page.data.mood}</span
     >
   </p>
   <Content />

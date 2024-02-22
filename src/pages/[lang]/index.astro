@@ -1,15 +1,19 @@
 ---
 import BaseLayout from "~/layouts/BaseLayout.astro";
-import ListOfDays from "../blog-days/ListOfDays.astro";
-import NavBarBlog from "../blog-days/NavBar.astro";
-import Footer from "../hero/Footer.astro";
-import Main from "../hero/Main.astro";
-import NavBar from "../hero/NavBar.astro";
+import ListOfDays from "~/components/blog-days/ListOfDays.astro";
+import NavBarBlog from "~/components/blog-days/NavBar.astro";
+import Footer from "~/components/hero/Footer.astro";
+import Main from "~/components/hero/Main.astro";
+import NavBar from "~/components/hero/NavBar.astro";
 
 import { defaultLanguage } from "~/i18n/ui";
 import { getTranslation } from "~/i18n/utils";
 
 const t = getTranslation(Astro.currentLocale ?? defaultLanguage);
+
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }];
+}
 ---
 
 <BaseLayout titlePage={t.SEO.title}>
