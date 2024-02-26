@@ -2,8 +2,8 @@
 title: "A Journey of Self-Discovery and Pure Love"
 day: 34
 pubDate: 2024-02-25
-tags: ["Love", "Reflection", "Hope", "Resilience", "Optimism", "Learning"]
-mood: "In Progress"
+tags: ["love", "reflection", "hope", "resilience", "optimism", "learning"]
+mood: "in progress"
 ---
 
 Time doesn't heal problems, nor does it change the situations we're facing. However, it does offer a moment of respite, allowing us to return and confront the situation from a different perspective. That's why at times, stepping back and taking a break from the situation can be incredibly rewarding.
