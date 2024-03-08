@@ -3,17 +3,14 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { TDay } from "~/types/day";
 
-type State = {
+interface TFavoriteStore {
   favorites: TDay[];
-};
-
-type Action = {
   addFavorite: (newDay: TDay) => void;
   removeFavorite: (day: number) => void;
-};
+}
 
-export const useFavoriteStore = create<State & Action>(
-  persist(
+export const useFavoriteStore = create(
+  persist<TFavoriteStore>(
     (set, get) => ({
       favorites: [],
       addFavorite: (newDay: TDay) => {
