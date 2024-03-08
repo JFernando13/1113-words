@@ -32,7 +32,7 @@ const filteredTags = [
     >
 
     <ul
-      class="z-20 h-0 max-h-[300px] overflow-scroll rounded-lg group-hover:h-max group-hover:animate-duration-300 absolute bg-secondary-500 dark:bg-primary-600 group-hover:p-4 grid grid-cols-3 w-max scale-0 group-hover:scale-100 transition-all origin-top-left duration-500"
+      class="z-20 h-0 max-h-[300px] overflow-scroll rounded-lg group-hover:h-max group-hover:animate-duration-300 absolute bg-secondary-300 dark:bg-primary-600 group-hover:p-4 grid grid-cols-3 w-max scale-0 group-hover:scale-100 transition-all origin-top-left duration-500 gap-4 mt-2"
     >
       {
         filteredTags.map((tag) => {
@@ -40,7 +40,7 @@ const filteredTags = [
             <li>
               <a
                 href={`${Astro.url.pathname}?tags=${tag}`}
-                class="bg-secondary-300 hover:bg-secondary-400 dark:bg-primary-600 dark:hover:bg-primary-700 flex py-2 px-4 capitalize w-full rounded-full justify-center"
+                class="bg-secondary-400 hover:bg-secondary-500 dark:bg-primary-600 dark:hover:bg-primary-700 flex py-2 px-4 capitalize w-full rounded-full justify-center transition-colors"
               >
                 {tag}
               </a>
