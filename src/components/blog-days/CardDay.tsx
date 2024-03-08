@@ -36,7 +36,7 @@ export function CardDay({ data, currentLocale, id }: Props) {
 
   return (
     <article
-      className={`flex flex-col justify-between px-8 py-7 h-full max-w-[500px] rounded-lg bg-secondary-500 dark:bg-primary-600/30 gap-6 shadow-card-primary hover:scale-105 transition-transform duration-300group`}
+      className={`flex flex-col justify-between px-8 py-7 h-full max-w-[500px] rounded-lg bg-secondary-500 dark:bg-primary-600/30 gap-6 shadow-card-primary hover:scale-105 transition-transform duration-300 group min-w-full`}
       onClick={navigate}
     >
       <main className="flex flex-col gap-2">
