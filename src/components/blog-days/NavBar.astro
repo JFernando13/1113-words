@@ -16,7 +16,7 @@ const allDays = await getCollection("days").then((days) => {
       const lang = day.slug.split("/")[0];
       return lang === currentLocale;
     })
-    .toSorted((a, b) => a.data.day - b.data.day);
+    .sort((a, b) => a.data.day - b.data.day);
 });
 
 const filteredTags = [

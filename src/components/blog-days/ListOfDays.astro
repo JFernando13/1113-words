@@ -12,13 +12,12 @@ const allDays = await getCollection("days").then((days) => {
       const lang = day.slug.split("/")[0];
       return lang === currentLocale;
     })
-    .toSorted((a, b) => a.data.day - b.data.day);
-  // .slice(0, 6);
+    .sort((a, b) => a.data.day - b.data.day);
 });
 
 const filteredDays = allDays.filter((day) => {
   if (Astro.url.searchParams.get("tags")) {
-    return day.data.tags.includes(Astro.url.searchParams.get("tags"));
+    return day.data.tags.includes(Astro.url.searchParams.get("tags") ?? "");
   }
   return true;
 });
