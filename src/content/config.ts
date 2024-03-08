@@ -5,7 +5,7 @@ const daysCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.date().transform((date) => date.toISOString().split("T")[0]),
-    tags: z.optional(z.array(z.string())),
+    tags: z.array(z.string()),
     day: z.number(),
     mood: z.string(),
   }),
