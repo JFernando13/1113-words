@@ -26,7 +26,6 @@
     "zustand": "^4.5.1"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.58.3",
     "clsx": "^2.1.0",
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.31.4",
