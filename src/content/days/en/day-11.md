@@ -2,7 +2,17 @@
 title: "Loneliness in dependence on the other"
 day: 11
 pubDate: 2024-02-02
-tags: ["loneliness", "reflections", "dependence", "love", "acceptance", "unfulfilled wishes", "bad moments", "support"]
+tags:
+  [
+    "loneliness",
+    "reflections",
+    "dependence",
+    "love",
+    "acceptance",
+    "unfulfilled wishes",
+    "bad moments",
+    "support",
+  ]
 mood: "apatico"
 ---
 

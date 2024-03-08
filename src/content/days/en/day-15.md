@@ -2,7 +2,23 @@
 title: "Love does not coexist with thoughts"
 day: 15
 pubDate: 2024-02-06
-tags: ["love", "insecurity", "relationships", "communication", "fear", "regret", "forgiveness", "hope", "transformation", "gratitude", "second chances", "emotions", "authenticity", "courage"]
+tags:
+  [
+    "love",
+    "insecurity",
+    "relationships",
+    "communication",
+    "fear",
+    "regret",
+    "forgiveness",
+    "hope",
+    "transformation",
+    "gratitude",
+    "second chances",
+    "emotions",
+    "authenticity",
+    "courage",
+  ]
 mood: "in love"
 ---
 

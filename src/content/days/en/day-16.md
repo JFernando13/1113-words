@@ -2,7 +2,19 @@
 title: "The other face of love: Obsession"
 day: 16
 pubDate: 2024-02-07
-tags: ["love", "relationships", "obsession", "self-acceptance", "personal transformation", "feelings", "society", "judgment", "misunderstanding", "self-knowledge"]
+tags:
+  [
+    "love",
+    "relationships",
+    "obsession",
+    "self-acceptance",
+    "personal transformation",
+    "feelings",
+    "society",
+    "judgment",
+    "misunderstanding",
+    "self-knowledge",
+  ]
 mood: "happy"
 ---
 

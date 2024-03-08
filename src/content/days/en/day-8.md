@@ -2,7 +2,18 @@
 title: "Learning to live between black and white"
 day: 8
 pubDate: 2024-01-30
-tags: ["love", "loneliness", "self-discovery", "authenticity", "changes", "changes", "routine", "habits", "challenges" ]
+tags:
+  [
+    "love",
+    "loneliness",
+    "self-discovery",
+    "authenticity",
+    "changes",
+    "changes",
+    "routine",
+    "habits",
+    "challenges",
+  ]
 mood: "balance"
 ---
 

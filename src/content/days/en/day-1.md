@@ -2,9 +2,21 @@
 title: "Traces of loneliness in contained longings"
 day: 1
 pubDate: 2024-01-23
-tags: ["mental health", "loneliness", "discontent", "personal relationships","acceptance", "frustration", "lost dreams", "uncertainty", "longings"]
+tags:
+  [
+    "mental health",
+    "loneliness",
+    "discontent",
+    "personal relationships",
+    "acceptance",
+    "frustration",
+    "lost dreams",
+    "uncertainty",
+    "longings",
+  ]
 mood: "normal"
 ---
+
 Sleep has the potential to be a traumatic event, especially for those who are with you every day, but the likelihood of something happening is very small, even though many people at some point in their lives wish and dream of ending their lives that way.
 
 In my case, I find myself in a state of alienation, letting my day unfold with the immense amount of events that arise in our lives. I don't give much importance to things that happen; for example, if I were to die due to a submarine implosion, it would be fine, or if it were due to the misfortune of life not being able to wake up after going to sleep, it would still be fine because these are things beyond my control.

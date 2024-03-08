@@ -2,7 +2,18 @@
 title: "The breaking point in my life"
 day: 17
 pubDate: 2024-02-08
-tags: ["happiness", "change", "tranquility", "love", "learning", "balance", "illusion", "processes", "hope" ]
+tags:
+  [
+    "happiness",
+    "change",
+    "tranquility",
+    "love",
+    "learning",
+    "balance",
+    "illusion",
+    "processes",
+    "hope",
+  ]
 mood: "calm"
 ---
 

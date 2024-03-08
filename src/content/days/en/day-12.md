@@ -2,7 +2,17 @@
 title: "A dream produced by insatiable desire"
 day: 12
 pubDate: 2024-02-03
-tags: ["dreams", "yearnings", "awakening", "relationships", "reflections", "emotions", "overcoming", "reunion" ]
+tags:
+  [
+    "dreams",
+    "yearnings",
+    "awakening",
+    "relationships",
+    "reflections",
+    "emotions",
+    "overcoming",
+    "reunion",
+  ]
 mood: "dreamer"
 ---
 

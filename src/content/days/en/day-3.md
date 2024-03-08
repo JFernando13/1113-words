@@ -2,9 +2,19 @@
 title: "Learning to live after goodbye"
 day: 3
 pubDate: 2024-01-25
-tags: ["self-acceptance", "overcoming", "reflection", "inner struggle", "hope", "attempts", "love"]
+tags:
+  [
+    "self-acceptance",
+    "overcoming",
+    "reflection",
+    "inner struggle",
+    "hope",
+    "attempts",
+    "love",
+  ]
 mood: "thoughtful"
 ---
+
 Waking up despite the fall, fighting for your dreams and trying until you succeed is what has always been heard from the common public. For decades, society has embraced the mindset of pushing ourselves to the limit to achieve success. However, today I had a revolutionary thought. It's about trying, making an effort, until you succeed, or until your body and mind are satisfied with the effort you've put in, without the need to push it to such an extreme point that it becomes toxic and harmful. When you strive so hard for things and don't achieve them, there's a sense of discouragement for not having succeeded. In my case, that's what happened.
 
 Today, I remembered how many times I've tried with Laura, how many times I've pushed myself to the limit in that situation and never end up getting what I desire. Despite having it at times, all I've managed to do is push her further away from me, to the point where she now sees me as a toxic and intense person because of the countless times I asked to talk again, believing in a promising future for both of us.

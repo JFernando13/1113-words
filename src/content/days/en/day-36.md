@@ -3,15 +3,15 @@ title: "Constantly repeating the same mistakes"
 day: 36
 pubDate: 2024-02-27
 tags:
-[
-  "mistakes",
-  "fear",
-  "insecurity",
-  "regret",
-  "guilt",
-  "problems",
-  "bad experience",
-]
+  [
+    "mistakes",
+    "fear",
+    "insecurity",
+    "regret",
+    "guilt",
+    "problems",
+    "bad experience",
+  ]
 mood: "afligido"
 ---
 

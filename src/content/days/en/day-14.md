@@ -2,7 +2,19 @@
 title: "Voids that cannot be filled"
 day: 14
 pubDate: 2024-02-05
-tags: ["love", "programming", "chess", "loss", "emotional emptiness", "overcoming", "sadness", "venting", "reflection", "emotional pain"]
+tags:
+  [
+    "love",
+    "programming",
+    "chess",
+    "loss",
+    "emotional emptiness",
+    "overcoming",
+    "sadness",
+    "venting",
+    "reflection",
+    "emotional pain",
+  ]
 mood: "sad"
 ---
 
@@ -37,4 +49,3 @@ Lately, I haven't cried as much as I did today, and it happened in a way I didn'
 Something good comes out of this situation: it helps me confront problems, analyze them, and develop more advanced concepts. This experience provides me with knowledge to avoid such situations in the future, although I hope there is no future without her presence.
 
 I love her too much, and her complete departure from my life would increase the void to the point where even 24 hours of programming couldn't solve it as I would like.
-

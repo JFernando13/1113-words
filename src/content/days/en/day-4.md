@@ -2,9 +2,18 @@
 title: "Between loves and a dependence"
 day: 4
 pubDate: 2024-01-26
-tags: ["dependence", "intense love", "self-knowledge", "emotions", "everydayness", "unconditional love"]
+tags:
+  [
+    "dependence",
+    "intense love",
+    "self-knowledge",
+    "emotions",
+    "everydayness",
+    "unconditional love",
+  ]
 mood: "emotional"
 ---
+
 We find ourselves in a bubble called society, where we have the obligation to interact with others; therefore, there will always be psychological or physical dependence on another person. This dependence can reach such prominent levels that it can completely alter your behavior with your surroundings depending on whether that person is part of your daily life or not.
 
 Laura, for me, is that person who completely changes the way I relate to the material world. In general, a day without her is like this: I wake up when my body decides (I can wake up at 3:00 or 9:00), depending on the accumulated fatigue. Then, I have breakfast with the first thing that comes to mind and I find in the fridge, usually bananas in various forms with some protein that appeals to me. After that, I watch videos until I get tired and start programming for so long that when I want to check the time, it's already lunchtime. Lunch, prepared by my mother, follows the video-watching and programming routine until dinner, marking the end of the day. The only interesting thing to share at the end of the day is that I spent the entire day sitting in a chair programming.

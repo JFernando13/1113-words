@@ -2,7 +2,17 @@
 title: "Aprendiendo a vivir entre el blanco y el negro"
 day: 8
 pubDate: 2024-01-30
-tags: ["amor", "soledad", "autodescubrimiento", "autenticidad", "cambios", "cambios", "rutina", "habitos",  "desafios"]
+tags:
+  [
+    "amor",
+    "soledad",
+    "autodescubrimiento",
+    "autenticidad",
+    "cambios",
+    "rutina",
+    "habitos",
+    "desafios",
+  ]
 mood: "equilibrio"
 ---
 
@@ -10,7 +20,7 @@ Hoy fue uno de esos días en donde las que varias de las cosas que te gustan se 
 
 Probablemente, la vea, probablemente hablemos, probablemente la vida nos vuelva a juntar, mostrándome lo cerca que está, aunque la distancia física diga lo contrario. Siempre está en mi memoria, siempre la tengo presente y algún momento de mi historia, la vida vuelve y me la pone de frente.
 
-Tengo ganas de verla y conversar incluso días anteriores a esta noticia, he soñado con algo parecido a eso, pero no quiero molestar, no quiero que me vea y le recuerde a situaciones que le incomodan, no quiero que tenga una mala experiencia en esta oportunidad que visita mi tierra natal. 
+Tengo ganas de verla y conversar incluso días anteriores a esta noticia, he soñado con algo parecido a eso, pero no quiero molestar, no quiero que me vea y le recuerde a situaciones que le incomodan, no quiero que tenga una mala experiencia en esta oportunidad que visita mi tierra natal.
 
 Al contrario de todo eso, quiero que esté contenta, que pase unos carnavales muy felices, por eso siento que lo mejor es no buscarla, no ir a verla, aunque este tan cerca, aunque me esté muriendo de ganas, prefiero no molestarla y dejar que todo pase sin que piense en mí.
 

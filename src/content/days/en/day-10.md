@@ -2,7 +2,17 @@
 title: "Let's learn how to have a relationship"
 day: 10
 pubDate: 2024-02-01
-tags: ["relationship", "falling in love", "love", "personal development", "society", "communication", "freedom", "confidence"]
+tags:
+  [
+    "relationship",
+    "falling in love",
+    "love",
+    "personal development",
+    "society",
+    "communication",
+    "freedom",
+    "confidence",
+  ]
 mood: "in love"
 ---
 

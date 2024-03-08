@@ -2,7 +2,14 @@
 title: "Mistakes that mark forever"
 day: 2
 pubDate: 2024-01-24
-tags: ["mental health", "personal relationships", "self-improvement", "self-centeredness", "regret"]
+tags:
+  [
+    "mental health",
+    "personal relationships",
+    "self-improvement",
+    "self-centeredness",
+    "regret",
+  ]
 mood: "regretted"
 ---
 

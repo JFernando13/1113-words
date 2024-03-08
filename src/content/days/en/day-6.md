@@ -2,7 +2,19 @@
 title: "Fears that prevent us from admiring the beauty of the simple"
 day: 6
 pubDate: 2024-01-28
-tags: ["love", "relationships", "acceptance", "experiences", "changes", "transformations", "self-improvement", "personal development", "happiness", "motivation"]
+tags:
+  [
+    "love",
+    "relationships",
+    "acceptance",
+    "experiences",
+    "changes",
+    "transformations",
+    "self-improvement",
+    "personal development",
+    "happiness",
+    "motivation",
+  ]
 mood: "very happy"
 ---
 
