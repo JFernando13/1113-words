@@ -1,18 +1,16 @@
-import { z, defineCollection } from 'astro:content'
+import { z, defineCollection } from "astro:content";
 
 const daysCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    pubDate: z
-      .date()
-      .transform((date) => date.toISOString().split("T")[0]),
+    pubDate: z.date(),
     tags: z.array(z.string()),
     day: z.number(),
     mood: z.string(),
-  })
-})
+  }),
+});
 
 export const collections = {
-  days: daysCollection
-}
+  days: daysCollection,
+};
