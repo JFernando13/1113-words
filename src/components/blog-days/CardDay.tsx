@@ -11,6 +11,7 @@ interface Props {
     pubDate: string;
     title: string;
     tags: string[];
+    mood: string;
   };
   id: string;
 }
