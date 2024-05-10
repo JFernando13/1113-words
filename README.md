@@ -29,4 +29,4 @@ While there may be alternatives to 1113 Word, what sets this project apart is it
 
 ## Get Started
 
-Explore the world of 1113 Word by visiting our website [here](https://youtube.com). Dive into a diverse collection of stories that promise to intrigue, inspire, and illuminate the beauty of everyday life—all in exactly 1113 words. Join us on this journey of storytelling and discovery, where every word matters.
+Explore the world of 1113 Word by visiting our website [here](https://1113-words.vercel.app/). Dive into a diverse collection of stories that promise to intrigue, inspire, and illuminate the beauty of everyday life—all in exactly 1113 words. Join us on this journey of storytelling and discovery, where every word matters.
